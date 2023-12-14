@@ -3,10 +3,10 @@ export const SWAGGER_OPTIONS = {
   swaggerDefinition: {
     openapi: '3.0.0',
     info: {
-      title: 'Crash JSON Placeholder API',
+      title: 'Crash Simulation and Handling API',
       version: '1.0.0',
       description:
-        'API documentation for simulating crashes using the JSON Placeholder API.',
+        'API documentation for simulating crashes and handling/returning them properly.',
       contact: {
         name: 'Orji Michael',
         email: 'orjimichael4886@gmail.com',
