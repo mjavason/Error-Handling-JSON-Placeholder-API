@@ -3,4 +3,4 @@
 // export = './whatever'
 // export { whatever } from './whatever';
 
-export { rateController } from './crash.controller';
+export { crashController } from './crash.controller';

@@ -3,10 +3,10 @@ export const SWAGGER_OPTIONS = {
   swaggerDefinition: {
     openapi: '3.0.0',
     info: {
-      title: 'Currency Converter API',
+      title: 'Crash JSON Placeholder API',
       version: '1.0.0',
       description:
-        'API documentation for currency conversion. Get the latest exchange rates and convert currencies.',
+        'API documentation for simulating crashes using the JSON Placeholder API.',
       contact: {
         name: 'Orji Michael',
         email: 'orjimichael4886@gmail.com',
@@ -14,13 +14,13 @@ export const SWAGGER_OPTIONS = {
     },
     servers: [
       { url: 'http://localhost:5000/api/v1', description: 'Development' },
-      // { url: 'https://currency-converter-api.onrender.com/api/v1', description: 'Staging' },
-      // { url: 'https://api.currencyconverter.com/api/v1', description: 'Production' },
+      // { url: 'https://crash-json-placeholder-api.onrender.com/api/v1', description: 'Staging' },
+      // { url: 'https://api.crashjsonplaceholder.com/api/v1', description: 'Production' },
     ],
     tags: [
       {
-        name: 'Currency Converter',
-        description: 'Endpoints for currency rates conversion.',
+        name: 'Crash',
+        description: 'Endpoints for simulating crashes.',
       },
     ],
   },

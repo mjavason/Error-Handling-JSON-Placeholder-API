@@ -1,13 +1,14 @@
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
+import { NextFunction, ErrorRequestHandler, Request, Response } from 'express';
 // import { CORS_ORIGIN } from '../constants';
 import { SWAGGER_OPTIONS } from '../config/swagger';
 import limiter from './rate_limiter.middleware';
 import morgan from 'morgan';
 import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
-import cookieParser from 'cookie-parser';
+import { InternalErrorResponse } from '../helpers/response.helper';
 
 function PreMiddleware(app: express.Application) {
   // Set up middleware functions for Express app
@@ -37,8 +38,6 @@ function PreMiddleware(app: express.Application) {
 
   // Apply rate limiting middleware to limit the number of requests
   app.use(limiter);
-
-  app.use(cookieParser());
 
   // Set up Swagger API documentation
   const swaggerSpec = swaggerJSDoc(SWAGGER_OPTIONS);

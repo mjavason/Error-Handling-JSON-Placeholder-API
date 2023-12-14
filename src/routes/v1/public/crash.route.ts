@@ -1,17 +1,9 @@
 import { Router } from 'express';
-import { rateController } from '../../../controllers';
-import { validateBodyDTO } from '../../../middleware/body.validation.middleware';
-import { CurrencyConversionDto } from '../../../validation/rate.validation';
-import { validateQueryDTO } from '../../../middleware/query.validation.middleware';
-
+import { crashController } from '../../../controllers';
 const router = Router();
 
-router.get('/', rateController.getLatestRates);
-router.get('/symbols', rateController.getAllSymbols);
-router.get(
-  '/convert',
-  validateQueryDTO(CurrencyConversionDto),
-  rateController.convert
-);
+router.post('/1', crashController.crash1);
+router.post('/2', crashController.crash2);
+router.post('/3', crashController.crash3);
 
 export default router;
